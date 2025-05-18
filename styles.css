@@ -1,0 +1,267 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, input, button {
+    font-family: 'Poppins', sans-serif;
+}
+
+input, button {
+    font-size: 14px;
+}
+
+.nav {
+    padding: 20px 54px;
+    position: fixed;
+    top: 0px;
+    z-index: 2;
+    left: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px #867C6E;
+    background-color: white;
+}
+
+.nav_judul {
+    color: #00bb46;
+}
+
+.nav_menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-weight: ;
+}
+
+.nav_menu > p:hover {
+    color: #00bb46;
+    cursor: pointer;
+}
+
+
+main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    width: 100%;
+    padding: 20px 54px;
+
+}
+
+section {
+    max-width: 1024px;
+    width: 100%;
+    border-radius: 12px;
+    background: #F6FBF6;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    margin-bottom: 16px;
+}
+
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    margin-bottom: 12px;
+    transition: 0.25s;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button:hover, .book_shelf > form > button:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em #979F97;
+  transform: translateY(-0.25em);
+}
+
+.btn_batal {
+    border: 2px solid #979F97;
+    background-color: #979F97;
+    color: white;
+}
+
+.btn_add {
+    border: 2px solid #00bb46;
+    background-color: #00bb46;
+    color: white;
+}
+
+.input_section > form > .input > input, .book_shelf > form > input {
+    width: 100%;
+    background: #F6FBF6;
+    border: 2px solid #00bb46;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    outline: none;
+}
+
+.input_section > form > .input > label {
+    color: #979F97;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: #979F97;
+}
+
+.book_shelf {
+    padding: 32px;
+}
+
+.book_shelf > form {
+    margin: 16px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.book_shelf > form > button {
+    transition: 0.25s;
+    padding: 8px 20px;
+    white-space: nowrap; 
+    min-width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.rak_buku {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+}
+
+.rak_buku > .book_list {
+    padding-top: 24px;
+    width: 50%;
+}
+
+.rak_buku > .book_list > h4 {
+    color: #00bb46;
+}
+
+.rak_buku > .book_list > .garis {
+    height: 6px;
+    width: 32px;
+    background: #00bb46;
+    color: #00bb46;
+    margin-bottom: 12px;
+}
+
+.rak_buku > .book_list > .list_item {
+    margin-top: 16px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.rak_buku > .book_list > .list_item > .book_item {
+    position: relative;
+    padding: 16px;
+    background-color: white;
+    width: 100%;
+    border-radius: 8px;
+    color: #979F97;
+    font-size: 14px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .isend {
+    padding: 4px 8px;
+    background: #BAFBD3;
+    color: #02AC42;
+    position: absolute;
+    top: 16px;
+    border-radius: 4px;
+    font-size: 10px;
+    right: 16px;
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .book_title {
+    font-weight: medium;
+    color: black;
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .action {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .action > button {
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap; 
+    min-width: auto;
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .action > button:hover {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .action > .primer {
+    background-color: #00bb46;
+    border: 2px solid #00bb46;
+    color: white;
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .action > .primer:hover {
+    background-color: #02AC42;
+    border: 2px solid #02AC42;
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .action > .second {
+    background-color: white;
+    border: 2px solid #979F97;
+    color: #979F97;
+}
+
+.rak_buku > .book_list > .list_item > .book_item > .action > .warn {
+    background-color: white;
+    border: 2px solid #00bb46;
+    color: #02AC42;
+}
+
+
+@media only screen and (max-width: 670px) {
+
+    .rak_buku {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .rak_buku > .book_list {
+        width: 100%;
+    }
+
+}

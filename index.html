@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookshelf - Jr</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav">
+    <h3 class="nav_judul">Bookshelf Apps</h3>
+    <nav class="nav_menu">
+      <p onclick="klikNavButton('list')">List buku</p>
+      <p onclick="klikNavButton('add')">Tambah buku</p>
+    </nav>
+  </header>
+  <main>
+    <section id="input_section" class="input_section">
+      <h3 id="judulForm">Tambah Koleksi Buku Baru</h3>
+      <form id="inputBook">
+        <div class="input">
+          <label for="inputBookTitle">Judul buku</label>
+          <input id="inputBookTitle" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookAuthor">Penulis</label>
+          <input id="inputBookAuthor" type="text" required>
+        </div>
+        <div class="input">
+          <label for="inputBookYear">Tahun terbit</label>
+          <input id="inputBookYear" type="number" placeholder="contoh: 2023" required>
+        </div>
+        <div class="input_inline">
+          <input id="inputBookIsComplete" type="checkbox">
+          <label for="inputBookIsComplete">Selesai dibaca</label>
+        </div>
+        <input id="idEdit" type="hidden" value="0">
+        <button style="display: none;" id="bookCancel" onclick="closeForm()" class="btn_batal" type="button">Batal ubah</button>
+        <button id="bookSubmit" type="submit" class="btn_add">Masukkan Buku ke rak</button>
+      </form>
+    </section>
+
+    <section id="book_shelf" style="display: none;" class="book_shelf">
+      <h3>Rak koleksi buku</h3>
+      <form id="searchBook">
+        <input id="searchBookTitle" type="text" minlength="2" placeholder="Ketikkan judul buku..." required="">
+        <button id="resetSearch" type="button" class="btn_batal" style="display: none;"  onclick="resetCari()">Reset</button>
+        <button id="searchSubmit" type="submit" class="btn_add">Cari buku</button>
+      </form>
+
+      <div class="rak_buku">
+        <div class="book_list">
+          <h4>Belum selesai dibaca</h4>
+          <div class="garis"></div>
+          <div id="incompleteBookshelfList" class="list_item">
+          </div>
+        </div>
+
+        <div class="book_list">
+          <h4>Selesai dibaca</h4>
+          <div class="garis"></div>
+          <div id="completeBookshelfList" class="list_item">
+          </div>
+        </div>
+      </div>      
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
